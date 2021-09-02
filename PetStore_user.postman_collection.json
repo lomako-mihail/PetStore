@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "e44e71d3-6eb7-4e0b-9886-0f32b2c9cdfe",
+		"name": "PetStore_user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"username\": \"misha3000\",\n  \"firstName\": \"misha\",\n  \"lastName\": \"lomako\",\n  \"email\": \"4a4a4a@mail.ru\",\n  \"password\": \"misha3001\",\n  \"phone\": \"375899898866\",\n  \"userStatus\": 0\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK_Create_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/user/misha3000' \\\r\n  -H 'accept: application/json'"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/misha3000",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"misha3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"username\": \"misha3000\",\n  \"firstName\": \"misha\",\n  \"lastName\": \"lomako\",\n  \"email\": \"4a4a4a@mail.ru\",\n  \"password\": \"misha3001\",\n  \"phone\": \"+375299412280\",\n  \"userStatus\": 0\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/misha3000",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"misha3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK_Update_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/user/misha3000' \\\r\n  -H 'accept: application/json'"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/misha3000",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"misha3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logs_user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=misha3000&password=misha3001",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "misha3000"
+						},
+						{
+							"key": "password",
+							"value": "misha3001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout_user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/user/misha3000' \\\r\n  -H 'accept: application/json'"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/misha3000",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"misha3000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK_Delete_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/user/misha3000' \\\r\n  -H 'accept: application/json'"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/misha3000",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"misha3000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
